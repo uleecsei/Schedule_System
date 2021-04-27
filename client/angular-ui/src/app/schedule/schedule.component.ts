@@ -9,6 +9,7 @@ import { CalendarMonthViewBeforeRenderEvent } from 'angular-calendar';
 })
 export class ScheduleComponent implements OnInit {
   viewDate = new Date();
+  customHeaderDays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд'];
 
   constructor() { }
 
@@ -19,8 +20,7 @@ export class ScheduleComponent implements OnInit {
   beforeMonthViewRender(event: CalendarMonthViewBeforeRenderEvent): void {
     event.body.forEach((day) => {
       if (event.header.some((day2) => day.date.toUTCString() === day2.date.toUTCString())){
-        day.cssClass = 'red';
-        console.log(day);
+        day.cssClass = 'current-week';
       }
     });
 
