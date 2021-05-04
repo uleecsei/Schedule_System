@@ -1,14 +1,1 @@
-<div class="wrapper">
-  <div class="custom-calendar-header">
-    <div class="custom-calendar-header__day" *ngFor="let day of customHeaderDays">
-      {{ day }}
-    </div>
-  </div>
-
-  <mwl-calendar-month-view
-    weekStartsOn="1"
-    [viewDate]="viewDate"
-    (beforeViewRender)="beforeMonthViewRender($event)"
-  ></mwl-calendar-month-view>
-</div>
-
+<app-calendar></app-calendar>

@@ -1,0 +1,50 @@
+<div class="wrapper">
+  <div class="current-month">
+    <div class="current-month__name">
+      {{displayedMonthIndex > monthList.length - 1 ? monthList[0] : displayedMonthIndex < 0 ? monthList[monthList.length - 1] : monthList[displayedMonthIndex]}}
+    </div>
+  </div>
+
+  <div class="calendar-block">
+    <div class="month-roulette">
+      <button
+        *ngIf="displayedMonthIndex >= currentMonthIndex"
+        (click)="onPreviousMonth()"
+        [view]="view"
+        [(viewDate)]="viewDate"
+        mwlCalendarPreviousView mat-button
+        class="month-roulette__name">
+        <mat-icon>navigate_before</mat-icon>
+        {{monthList[displayedMonthIndex - 1] ? monthList[displayedMonthIndex - 1] : monthList[monthList.length - 1]}}
+      </button>
+    </div>
+
+    <div class="calendar">
+      <div class="calendar__header">
+        <div class="calendar__day" *ngFor="let day of customHeaderDays">
+          {{ day }}
+        </div>
+      </div>
+
+      <mwl-calendar-month-view
+        weekStartsOn="1"
+        [viewDate]="viewDate"
+        (beforeViewRender)="beforeMonthViewRender($event)"
+      ></mwl-calendar-month-view>
+    </div>
+
+    <div class="month-roulette">
+      <button
+        *ngIf="displayedMonthIndex <= currentMonthIndex"
+        (click)="onNextMonth()"
+        [view]="view"
+        [(viewDate)]="viewDate"
+        mwlCalendarNextView mat-button
+        class="month-roulette__name">
+        {{monthList[displayedMonthIndex + 1] ? monthList[displayedMonthIndex + 1] : monthList[0]}}
+        <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
