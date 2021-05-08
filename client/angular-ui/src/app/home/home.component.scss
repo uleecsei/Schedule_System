@@ -1,0 +1,18 @@
+.home {
+  margin: 300px auto 0 auto;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__group {
+    width: 230px;
+  }
+
+  &__submit {
+    float: right;
+    margin-right: 18px;
+  }
+}
