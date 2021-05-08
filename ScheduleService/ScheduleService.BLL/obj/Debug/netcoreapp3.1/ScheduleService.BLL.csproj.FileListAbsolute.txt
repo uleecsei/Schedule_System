@@ -1,0 +1,9 @@
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.csprojAssemblyReference.cache
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.AssemblyInfoInputs.cache
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.AssemblyInfo.cs
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.csproj.CoreCompileInputs.cache
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\bin\Debug\netcoreapp3.1\ScheduleService.BLL.deps.json
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\bin\Debug\netcoreapp3.1\ScheduleService.BLL.dll
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\bin\Debug\netcoreapp3.1\ScheduleService.BLL.pdb
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.dll
+D:\git\Schedule_System\ScheduleService\ScheduleService.BLL\obj\Debug\netcoreapp3.1\ScheduleService.BLL.pdb
