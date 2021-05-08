@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'schedule',
+    pathMatch: 'full'
+  },
+  {
+    path: 'schedule',
+    loadChildren: () => import('./schedule/schedule.module').then((s) => s.ScheduleModule)
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,64 @@
+@import "variables";
+
+.cal-month-view {
+  width: 430px;
+  margin: 0 auto;
+}
+
+.current-week {
+  background-color: aliceblue;
+  border-radius: 0;
+}
+
+.cal-month-view .cal-day-cell.cal-today {
+  background-color: aliceblue;
+}
+
+.cal-month-view .cal-day-cell.cal-today::after{
+  content: "";
+  width: 56px;
+  height: 54px;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid red;
+}
+
+.cal-month-view .cal-days {
+  border: none;
+}
+
+.cal-month-view .cal-day-cell {
+  height: 60px;
+  min-height: 60px;
+  border: none;
+}
+
+.cal-month-view .cal-day-cell:not(:last-child) {
+  border: none;
+}
+
+.cal-month-view .cal-day-cell:focus {
+  outline-width: 2px;
+}
+
+.cal-month-view .cal-cell-top {
+  min-height: 60px;
+}
+
+mwl-calendar-month-view-header {
+  display: none;
+}
+
+.cal-month-view .cal-days .cal-cell-row {
+  border: none;
+}
+
+.cal-month-view .cal-day-number {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.cal-month-view .cal-day-cell.cal-today .cal-day-number {
+  font-size: 1.2em;
+  font-weight: bold;
+}
