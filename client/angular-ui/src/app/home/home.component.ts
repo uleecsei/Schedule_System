@@ -27,7 +27,7 @@ export class HomeComponent extends Unsubscriber {
   }
 
   onSubmit(): void {
-    this.homeService.getGroup(this.groupNameControl.value).pipe(
+    this.homeService.getGroupByGroupName(this.groupNameControl.value).pipe(
       takeUntil(this.unsubscribe),
       catchError((err) => {
         this.toastr.openSnackBar(err.message, 'Помилка сервера');

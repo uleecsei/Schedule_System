@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h1 class="title">Практика 1   <button mat-button>All materials</button></h1>
+
+  <ul class="materials">
+    <li class="material" *ngFor="let material of materials">
+      <div class="name">{{material.name}}</div>
+      <div>
+        <button mat-button><mat-icon>download</mat-icon></button>
+        <button mat-button><mat-icon>visibility</mat-icon></button>
+      </div>
+    </li>
+  </ul>
+</div>

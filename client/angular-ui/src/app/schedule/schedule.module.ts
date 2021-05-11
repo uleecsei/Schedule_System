@@ -7,10 +7,11 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ScheduleComponent } from './schedule.component';
 import { MaterialModule } from '../material/material.module';
 import { CalendarComponent } from './calendar/calendar.component';
+import { WeekComponent } from './week/week.component';
 
 
 @NgModule({
-  declarations: [ScheduleComponent, CalendarComponent],
+  declarations: [ScheduleComponent, CalendarComponent, WeekComponent],
   imports: [
     CommonModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),

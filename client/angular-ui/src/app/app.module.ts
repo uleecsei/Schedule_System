@@ -10,11 +10,15 @@ import { ScheduleModule } from './schedule/schedule.module';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { RoomComponent } from './room/room.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,
