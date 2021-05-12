@@ -16,9 +16,21 @@ export class CalendarComponent {
     'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
   currentMonthIndex = new Date().getMonth();
   displayedMonthIndex = this.currentMonthIndex;
+  dayClicked: Date;
 
   beforeMonthViewRender(event: CalendarMonthViewBeforeRenderEvent): void {
     this.setStylesForCurrentWeek(event);
+    this.setStylesForSelectedWeek(event);
+  }
+
+  onDayClicked({ date }): void {
+    this.dayClicked = new Date(date);
+    // triggers beforeMonthViewRender
+    this.viewDate = new Date();
+  }
+
+  setStylesForSelectedWeek(event: CalendarMonthViewBeforeRenderEvent): void {
+    console.log(event, this.dayClicked);
   }
 
   setStylesForCurrentWeek(event: CalendarMonthViewBeforeRenderEvent): void {
@@ -30,6 +42,7 @@ export class CalendarComponent {
         monthViewDay.cssClass = 'current-week';
       }
     });
+    console.log(this.dayClicked);
   }
 
   onNextMonth(): void{

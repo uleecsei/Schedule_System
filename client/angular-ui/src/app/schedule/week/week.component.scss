@@ -1,3 +1,5 @@
+@import "variables";
+
 .week {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +18,7 @@
     &__lesson {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid $gainsboro;
     }
 
     &__lesson-name {

@@ -20,16 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90c755ab-e190-47bf-a8ba-4a826da6821d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/home.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/home.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/material/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/material/material.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/schedule.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/schedule.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/schedule.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/schedule.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/calendar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/calendar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/calendar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/_calendar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -72,10 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620486217364</updated>
-      <workItem from="1620486218653" duration="8123000" />
-      <workItem from="1620495970512" duration="203000" />
-      <workItem from="1620672453074" duration="140000" />
-      <workItem from="1620674088094" duration="8164000" />
+      <workItem from="1620486218653" duration="7472000" />
     </task>
     <servers />
   </component>
@@ -99,13 +93,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1620487721502" />
-    <state x="427" y="205" width="586" height="490" key="find.popup" timestamp="1620769974465">
+    <state x="487" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1620850876180">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="427" y="205" width="586" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1620769974465" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1620765439088">
+    <state x="487" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1620850876180" />
+    <state x="427" y="205" width="586" height="548" key="find.popup" timestamp="1620852041159">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1620765439088" />
+    <state x="427" y="205" width="586" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1620852041159" />
   </component>
 </project>
