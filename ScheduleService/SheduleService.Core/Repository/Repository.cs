@@ -1,36 +1,46 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SheduleService.Core.Repository.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SheduleService.Core.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private DbSet<T> _context { get; }
+        internal DbSet<T> _set { get; }
+
         public Repository(DbContext context)
         {
-            _context = context.Set<T>();
+            _set = context.Set<T>();
         }
 
         public void Add(T value)
         {
-            _context.Add(value);
+            _set.Add(value);
+        }
+
+        public void AddRange(IEnumerable<T> values)
+        {
+            foreach (var item in values)
+            {
+                Add(item);
+            }
         }
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await _context.ToListAsync();
+            return await _set.ToListAsync();
         }
 
         public async Task<T> GetById(int id)
         {
-            return await _context.FindAsync(id);
+            return await _set.FindAsync(id);
         }
 
         public void Remove(T value)
         {
-            _context.Remove(value);
+            _set.Remove(value);
         }
     }
 }

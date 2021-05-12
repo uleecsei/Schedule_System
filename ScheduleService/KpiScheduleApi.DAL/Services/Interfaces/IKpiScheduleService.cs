@@ -1,4 +1,5 @@
-﻿using ScheduleService.Models;
+﻿using ScheduleService.CoreModels;
+using ScheduleService.CoreModels.KpiScheduleModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,7 +7,7 @@ namespace KpiScheduleCore.Services.Interfaces
 {
     public interface IKpiScheduleService
     {
-        Task<List<Lesson>> GetGroupLessonsList(string groupName);
+        Task<List<KpiLesson>> GetGroupLessonsList(string groupName);
         Task<int> GetCurrentWeekNumber();
     }
 }

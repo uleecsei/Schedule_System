@@ -1,9 +1,10 @@
 ﻿using KpiScheduleCore.Services.Interfaces;
-using ScheduleService.Models;
+using Newtonsoft.Json;
+using ScheduleService.CoreModels;
+using ScheduleService.CoreModels.KpiScheduleModels;
 using ScheduleService.ModelsConstants;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace KpiScheduleCore.Services
@@ -21,15 +22,15 @@ namespace KpiScheduleCore.Services
         {
             var response = await _httpClient.GetAsync($"{KpiScheduleApiConstants.KpiScheduleApiUri}/weeks");
             var responseContent = await response.Content.ReadAsStringAsync();
-            var weekNumber = JsonSerializer.Deserialize<CommonResponse<int>>(responseContent);
+            var weekNumber = JsonConvert.DeserializeObject<CommonResponse<int>>(responseContent);
             return weekNumber.data;
         }
 
-        public async Task<List<Lesson>> GetGroupLessonsList(string groupName)
+        public async Task<List<KpiLesson>> GetGroupLessonsList(string groupName)
         {
             var response = await _httpClient.GetAsync($"{KpiScheduleApiConstants.KpiScheduleApiUri}/groups/{groupName}/lessons");
             var responseContent = await response.Content.ReadAsStringAsync();
-            var lessons = JsonSerializer.Deserialize<CommonResponse<List<Lesson>>>(responseContent);
+            var lessons = JsonConvert.DeserializeObject<CommonResponse<List<KpiLesson>>>(responseContent);
             return lessons.data;
         }
     }

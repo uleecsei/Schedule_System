@@ -10,9 +10,9 @@ D:\git\Schedule_System\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleSe
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\bin\Debug\netcoreapp3.1\ScheduleService.Models.deps.json
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\bin\Debug\netcoreapp3.1\ScheduleService.Models.dll
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\bin\Debug\netcoreapp3.1\ScheduleService.Models.pdb
-D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.csprojAssemblyReference.cache
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.AssemblyInfoInputs.cache
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.AssemblyInfo.cs
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.csproj.CoreCompileInputs.cache
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.dll
 D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.pdb
+D:\git\Schedule_System\ScheduleService\ScheduleService.Models\obj\Debug\netcoreapp3.1\ScheduleService.Models.csprojAssemblyReference.cache

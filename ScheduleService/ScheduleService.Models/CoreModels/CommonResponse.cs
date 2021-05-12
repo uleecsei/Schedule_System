@@ -1,4 +1,4 @@
-﻿namespace ScheduleService.Models
+﻿namespace ScheduleService.CoreModels
 {
     public class CommonResponse<T>
     {

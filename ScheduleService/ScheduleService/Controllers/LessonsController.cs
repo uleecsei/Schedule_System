@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ScheduleService.BLL.Services.Abstractions;
 using System.Threading.Tasks;
 
 namespace ScheduleService.Controllers
@@ -11,19 +12,15 @@ namespace ScheduleService.Controllers
 
         public LessonsController(ILessonService lessonService)
         {
-            _lessonService = lessonService
+            _lessonService = lessonService;
         }
 
         [HttpGet]
         [Route("{groupName}")]
         public async Task<IActionResult> GetLessons(string groupName)
         {
-            _lessonService.
-
-
+            var lessons = await _lessonService.GetLessons(groupName);
+            return Ok(lessons);
         }
-
-
-
     }
 }

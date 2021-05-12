@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.11.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\KpiScheduleApi.DAL\KpiScheduleApiDAL.csproj" />
     <ProjectReference Include="..\ScheduleService.Models\ScheduleService.Models.csproj" />
     <ProjectReference Include="..\SheduleService.Core\SheduleService.Core.csproj" />

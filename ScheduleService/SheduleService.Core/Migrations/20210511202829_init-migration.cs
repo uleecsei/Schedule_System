@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace SheduleService.Core.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,8 +12,9 @@ namespace SheduleService.Core.Migrations
                 name: "Lessons",
                 columns: table => new
                 {
-                    lesson_id = table.Column<string>(nullable: false),
-                    group_id = table.Column<string>(nullable: true),
+                    lesson_id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    group_id = table.Column<int>(nullable: false),
                     day_number = table.Column<string>(nullable: true),
                     day_name = table.Column<string>(nullable: true),
                     lesson_name = table.Column<string>(nullable: true),
@@ -22,7 +25,8 @@ namespace SheduleService.Core.Migrations
                     teacher_name = table.Column<string>(nullable: true),
                     lesson_week = table.Column<string>(nullable: true),
                     time_start = table.Column<string>(nullable: true),
-                    time_end = table.Column<string>(nullable: true)
+                    time_end = table.Column<string>(nullable: true),
+                    lesson_date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +37,8 @@ namespace SheduleService.Core.Migrations
                 name: "Teachers",
                 columns: table => new
                 {
-                    teacher_id = table.Column<string>(nullable: false),
+                    teacher_id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     teacher_name = table.Column<string>(nullable: true),
                     teacher_full_name = table.Column<string>(nullable: true),
                     teacher_short_name = table.Column<string>(nullable: true),
@@ -49,8 +54,8 @@ namespace SheduleService.Core.Migrations
                 name: "TeacherOnLessons",
                 columns: table => new
                 {
-                    Teacher_Id = table.Column<string>(nullable: false),
-                    Lesson_Id = table.Column<string>(nullable: false)
+                    Teacher_Id = table.Column<int>(nullable: false),
+                    Lesson_Id = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

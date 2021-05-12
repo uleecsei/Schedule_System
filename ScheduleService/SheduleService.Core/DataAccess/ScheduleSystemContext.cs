@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ScheduleService.Models;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using ScheduleService.CoreModels;
+using ScheduleService.Models.CoreModels;
 
 namespace SheduleService.Core.DataAccess
 {
-    public class ScheduleSystemContext : DbContext
+    public class ScheduleSystemContext : IdentityDbContext<User>
     {
         public ScheduleSystemContext(DbContextOptions<ScheduleSystemContext> options) : base(options)
         {

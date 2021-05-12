@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace ScheduleService.Models
+namespace ScheduleService.CoreModels
 {
     public class Teacher
     {
-        public string teacher_id { get; set; }
+        public int teacher_id { get; set; }
         public string teacher_name { get; set; }
         public string teacher_full_name { get; set; }
         public string teacher_short_name { get; set; }
