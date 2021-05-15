@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 
@@ -16,7 +17,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    MatTreeModule
   ]
 })
 export class MaterialModule { }

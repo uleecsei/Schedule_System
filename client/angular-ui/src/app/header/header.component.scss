@@ -1,11 +1,18 @@
 @import "variables";
 
 .header {
-  text-align: end;
   background: $blue;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
 
   mat-icon {
+    display: inline-block;
     margin: 20px;
+  }
+
+  &__logo {
+    margin-left: 10px;
+    margin-top: 15px;
   }
 }

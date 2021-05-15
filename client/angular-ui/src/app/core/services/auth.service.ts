@@ -1,5 +1,5 @@
 import { Injectable, Injector } from '@angular/core';
-import { BehaviorSubject, EMPTY, Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 import { ApiService } from '../../shared/services/api.service';
@@ -15,10 +15,11 @@ export class AuthService extends ApiService {
     super(injector);
   }
 
-  login({ username, password }): Observable<any> {
-    return super.post<any>('login', null, { params: { username, password } }).pipe(
-      tap((user) => this.currentUser)
-    );
+  login(username: string, password: string): Observable<any> {
+    // return super.post<any>('login', null, { params: { username, password } }).pipe(
+    //   tap((user) => this.currentUser)
+    // );
+    return of(123);
   }
 
   logout(): Observable<any> {

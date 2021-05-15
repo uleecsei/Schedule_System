@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { catchError, takeUntil } from 'rxjs/operators';
 import { EMPTY } from 'rxjs';
 
-
-import { HomeService } from '../core/services/home.service';
-import { Unsubscriber } from '../shared/unsubscriber.class';
 import { ToastService } from '../core/services/toastr.service';
+import { Unsubscriber } from '../shared/unsubscriber.class';
+import { AuthService } from '../core/services/auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.scss']
 })
-export class HomeComponent extends Unsubscriber {
+export class AuthComponent extends Unsubscriber{
   someData: any;
-  groupNameControl: FormControl = new FormControl();
+  name: FormControl = new FormControl();
+  password: FormControl = new FormControl();
 
   constructor(
-    private homeService: HomeService,
+    private authService: AuthService,
     private router: Router,
     private toastr: ToastService
   ) {
@@ -27,7 +27,7 @@ export class HomeComponent extends Unsubscriber {
   }
 
   onSubmit(): void {
-    this.homeService.getGroupByGroupName(this.groupNameControl.value).pipe(
+    this.authService.login(this.name.value, this.password.value).pipe(
       takeUntil(this.unsubscribe),
       catchError((err) => {
         this.toastr.openSnackBar(err.message, 'Помилка сервера');

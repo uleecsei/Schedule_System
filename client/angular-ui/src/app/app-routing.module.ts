@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
+import { AuthComponent } from './auth/auth.component';
+import { SilabusComponent } from './silabus/silabus.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    component: HomeComponent
+    path: 'auth',
+    component: AuthComponent
   },
   {
     path: 'schedule',
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'room',
     component: RoomComponent
+  },
+  {
+    path: 'silabus',
+    component: SilabusComponent
   }
 ];
 

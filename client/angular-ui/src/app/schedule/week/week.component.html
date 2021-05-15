@@ -2,10 +2,12 @@
   <mat-card class="day" *ngFor="let day of week">
     <div class="day__name">{{day.name}}</div>
     <ul class="day__lessons">
-      <li class="day__lesson" *ngFor="let lesson of day.lessons">
+      <li class="day__lesson" *ngFor="let lesson of day.lessons" [title]="lesson">
         <div class="day__lesson-name">{{lesson.name}}</div>
         <div class="day__button-group">
-          <button mat-flat-button class="day__button">join</button>
+          <button mat-flat-button class="day__button">
+            <a target="_blank" href="https://us04web.zoom.us/j/74814166074?pwd=c2NtU0xnRms1NFpMNG1IaWFaTnJtUT09">join</a>
+          </button>
           <button mat-flat-button class="day__button" (click)="onRoomEnter()">tasks</button>
         </div>
       </li>

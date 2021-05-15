@@ -2,23 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScheduleModule } from './schedule/schedule.module';
-import { HomeComponent } from './home/home.component';
-import { MaterialModule } from './material/material.module';
-import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { RoomComponent } from './room/room.component';
+import { AuthComponent } from './auth/auth.component';
+import { SharedModule } from './shared/shared.module';
+import { SilabusComponent } from './silabus/silabus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
-    RoomComponent
+    AuthComponent,
+    RoomComponent,
+    SilabusComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,8 +29,8 @@ import { RoomComponent } from './room/room.component';
     ScheduleModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

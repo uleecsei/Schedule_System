@@ -1,13 +1,22 @@
 <div class="home" (keyup.enter)="onSubmit()">
-  <h1>Введіть назву групи:</h1>
+  <app-logo></app-logo>
 
   <mat-form-field class="home__group">
-    <mat-label>Група</mat-label>
     <input
       type="text"
       matInput
-      placeholder="ТР-71"
-      [formControl]="groupNameControl">
+      placeholder="Login"
+      [formControl]="name"
+      >
+  </mat-form-field>
+
+  <mat-form-field class="home__group">
+    <input
+      type="password"
+      matInput
+      placeholder="Password"
+      [formControl]="password"
+      >
   </mat-form-field>
 
   <button
@@ -18,4 +27,3 @@
     Підтвердити
   </button>
 </div>
-

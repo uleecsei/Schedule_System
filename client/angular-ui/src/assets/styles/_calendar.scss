@@ -6,12 +6,16 @@
 }
 
 .current-week {
-  background-color: $blue;
+  background-color: $blue !important;
   border-radius: 0;
 }
 
+.cal-month-view .cal-cell-row .cal-cell:hover {
+  background-color: inherit;
+}
+
 .cal-month-view .cal-day-cell.cal-today {
-  background-color: $blue;
+  background-color: white;
 }
 
 .cal-month-view .cal-day-cell.cal-today::after{
