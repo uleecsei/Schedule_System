@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { getWeek } from 'date-fns';
 
 import { CalendarMonthViewBeforeRenderEvent, CalendarView } from 'angular-calendar';

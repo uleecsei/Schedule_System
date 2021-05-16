@@ -1,38 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 
 interface SilabusDataNode {
   name: string;
   children?: SilabusDataNode[];
+  fileLink?: string;
 }
 
 const TREE_DATA: SilabusDataNode[] = [
   {
-    name: 'Fruit',
+    name: 'Всі матеріали',
     children: [
-      {name: 'Apple'},
-      {name: 'Banana'},
-      {name: 'Fruit loops'},
+      { name: 'name', fileLink: 'https://www.google.com/' }
     ]
-  }, {
-    name: 'Vegetables',
-    children: [
-      {
-        name: 'Green',
-        children: [
-          {name: 'Broccoli'},
-          {name: 'Brussels sprouts'},
-        ]
-      }, {
-        name: 'Orange',
-        children: [
-          {name: 'Pumpkins'},
-          {name: 'Carrots'},
-        ]
-      },
-    ]
-  },
+  }
 ];
 
 /** Flat node with expandable and level information */
@@ -47,7 +29,8 @@ interface ExampleFlatNode {
   templateUrl: './tree.component.html',
   styleUrls: ['./tree.component.scss']
 })
-export class TreeComponent {
+export class TreeComponent implements OnInit{
+  @Input() files;
   // tslint:disable-next-line:variable-name
   private _transformer = (node: SilabusDataNode, level: number) => {
     return {
@@ -55,6 +38,10 @@ export class TreeComponent {
       name: node.name,
       level,
     };
+  }
+
+  ngOnInit(): void{
+    setTimeout(() => TREE_DATA[0].children = this.files, 2000);
   }
 
   treeControl = new FlatTreeControl<ExampleFlatNode>(

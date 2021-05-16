@@ -1,3 +1,5 @@
+@import "variables";
+
 .home {
   margin: 300px auto 0 auto;
   width: 250px;
@@ -15,4 +17,10 @@
     float: right;
     margin-right: 18px;
   }
+}
+
+.logo {
+  color: $dark-blue;
+  font-weight: bold;
+  font-size: 50px;
 }

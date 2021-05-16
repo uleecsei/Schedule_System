@@ -1,9 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { takeUntil } from 'rxjs/operators';
 
 import { ScheduleService } from '../../core/services/schedule.service';
 import { Unsubscriber } from '../../shared/unsubscriber.class';
+import { AuthService } from '../../core/services/auth.service';
+import { ModalComponent } from '../../shared/components/modal/modal.component';
 
 const mockedWeek1 = [
   {
@@ -99,10 +102,13 @@ const mockedWeek2 = [
 })
 export class WeekComponent extends Unsubscriber implements OnInit {
   week;
+  currentUser = this.authService.getCurrentUser();
 
   constructor(
     private router: Router,
-    private scheduleService: ScheduleService) {
+    private scheduleService: ScheduleService,
+    private authService: AuthService,
+    private dialog: MatDialog) {
     super();
   }
 
@@ -114,7 +120,14 @@ export class WeekComponent extends Unsubscriber implements OnInit {
     });
   }
 
-  onRoomEnter(): void {
-    this.router.navigate(['room']);
+  onRoomEnter(lesson: string): void {
+    this.router.navigate(['room'], { queryParams: { lesson } });
+  }
+
+  uploadLink(): void {
+    this.dialog.open(ModalComponent, {
+      width: '300px',
+      data: {}
+    });
   }
 }

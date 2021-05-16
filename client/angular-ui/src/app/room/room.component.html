@@ -1,15 +1,21 @@
 <button class="back" mat-button routerLink="/schedule"><mat-icon>chevron_left</mat-icon>Back</button>
 
 <div class="wrapper">
-  <h1 class="title">Практика 1   <button mat-button routerLink="/silabus">All materials</button></h1>
+  <h1 class="title">{{lessonName}}   <button mat-button (click)="onSilabusEnter()">All materials</button></h1>
 
   <ul class="materials">
     <li class="material" *ngFor="let material of materials">
       <div class="name">{{material.name}}</div>
       <div>
-        <button mat-button><mat-icon>download</mat-icon></button>
-        <button mat-button><mat-icon>visibility</mat-icon></button>
+        <button mat-button><a [href]="material.fileLink"><mat-icon>download</mat-icon></a></button>
       </div>
     </li>
   </ul>
+
+  <div *ngIf="currentUser === 'teacher'">
+    <h3>Завантажити файл:</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      <input type="file" ng2FileSelect [uploader]="uploader" multiple  />
+    </form>
+  </div>
 </div>

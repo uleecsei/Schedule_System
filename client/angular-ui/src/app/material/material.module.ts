@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -18,7 +19,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatButtonModule,
     MatSnackBarModule,
     MatCardModule,
-    MatTreeModule
+    MatTreeModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

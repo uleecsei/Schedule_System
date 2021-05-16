@@ -20,29 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90c755ab-e190-47bf-a8ba-4a826da6821d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/models/lesson.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/models/teacher.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/auth/auth.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/auth/auth.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/auth/auth.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/auth/auth.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/core/core.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/schedule.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/core/services/schedule.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/material/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/material/material.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/room/room.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/calendar/calendar.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/schedule/week/week.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/logo/logo.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/logo/logo.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/tree/tree.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/tree/tree.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/tree/tree.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/components/tree/tree.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/_calendar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/assets/styles/_calendar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/silabus/silabus.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/silabus/silabus.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/angular-ui/src/app/silabus/silabus.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular-ui/src/app/silabus/silabus.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,10 +116,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="487" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1620850876180" />
-    <state x="427" y="205" width="586" height="548" key="find.popup" timestamp="1621105242012">
+    <state x="427" y="205" width="586" height="548" key="find.popup" timestamp="1621178232464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="427" y="205" width="586" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1621105242012" />
+    <state x="427" y="205" width="586" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1621178232464" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1621098684563">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

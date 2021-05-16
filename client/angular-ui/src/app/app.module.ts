@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { CloudinaryModule } from '@cloudinary/angular-5.x';
+import * as Cloudinary from 'cloudinary-core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { RoomComponent } from './room/room.component';
 import { AuthComponent } from './auth/auth.component';
 import { SharedModule } from './shared/shared.module';
 import { SilabusComponent } from './silabus/silabus.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { SilabusComponent } from './silabus/silabus.component';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    FileUploadModule,
+    CloudinaryModule.forRoot(Cloudinary, { cloud_name: 'uleecsei', upload_preset: 'ewkp2ols'})
   ],
   providers: [],
   bootstrap: [AppComponent]
