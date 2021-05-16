@@ -1,0 +1,28 @@
+@import "variables";
+
+.week {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+
+  .day {
+    width: 45%;
+    margin-top: 20px;
+    height: 160px;
+
+    &__name {
+      font-weight: bold;
+    }
+
+    &__lesson {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $gainsboro;
+    }
+
+    &__lesson-name {
+      align-self: center;
+    }
+  }
+}
