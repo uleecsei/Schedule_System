@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using KpiScheduleCore.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using ScheduleService.BLL.Extentions;
 using ScheduleService.BLL.Services.Abstractions;
 using ScheduleService.CoreModels;
 using ScheduleService.CoreModels.ContractModels;
+using ScheduleService.Models.CoreModels;
 using SheduleService.Core.Repository;
 using SheduleService.Core.Repository.Interfaces;
 using SheduleService.Core.UnitOfWork;
@@ -19,18 +21,21 @@ namespace ScheduleService.BLL.Services
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
         private readonly IKpiScheduleService _kpiScheduleService;
-  
+        private readonly UserManager<User> _userManager;
 
-        public LessonService(IUnitOfWork uow, IKpiScheduleService kpiScheduleService, IMapper mapper)
+
+        public LessonService(IUnitOfWork uow, IKpiScheduleService kpiScheduleService, IMapper mapper, UserManager<User> userManager)
         {
+            _userManager = userManager;
             _uow = uow;
             _mapper = mapper;
             _kpiScheduleService = kpiScheduleService;
         }
 
-        public async Task<List<LessonDto>> GetLessons(string groupName)
+        public async Task<List<LessonDto>> GetLessons(string userId)
         {
-            var getLessonsFromKpiApi = await _kpiScheduleService.GetGroupLessonsList(groupName);
+            var user = await _userManager.FindByIdAsync(userId);
+            var getLessonsFromKpiApi = await _kpiScheduleService.GetGroupLessonsList(user.GroupName);
             var dtoLessons = _mapper.Map<List<LessonDto>>(getLessonsFromKpiApi);
             var curWeekN = await _kpiScheduleService.GetCurrentWeekNumber();
 

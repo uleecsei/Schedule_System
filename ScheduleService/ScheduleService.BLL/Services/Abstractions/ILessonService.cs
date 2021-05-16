@@ -7,6 +7,6 @@ namespace ScheduleService.BLL.Services.Abstractions
 {
     public interface ILessonService
     {
-        Task<List<LessonDto>> GetLessons(string groupName);
+        Task<List<LessonDto>> GetLessons(string userId);
     }
 }
