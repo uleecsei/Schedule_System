@@ -12,12 +12,14 @@ export class HomeService extends ApiService{
     super(injector);
   }
 
-  getGroup(groupName: string): Observable<any> {
+  getGroupByGroupName(groupName: string): Observable<any> {
     const cleanGroupName = groupName.trim().toLowerCase();
     if (cleanGroupName === 'тр-71') {
       return of(123);
     }
     return super.get('');
   }
+
+
 
 }

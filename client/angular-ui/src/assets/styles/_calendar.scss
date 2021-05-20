@@ -1,26 +1,34 @@
 @import "variables";
 
 .cal-month-view {
-  width: 430px;
+  width: 300px;
   margin: 0 auto;
 }
 
 .current-week {
-  background-color: aliceblue;
+  background-color: $blue !important;
   border-radius: 0;
 }
 
+.cal-month-view .cal-cell-row .cal-cell:hover {
+  background-color: inherit;
+}
+
 .cal-month-view .cal-day-cell.cal-today {
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .cal-month-view .cal-day-cell.cal-today::after{
   content: "";
-  width: 56px;
-  height: 54px;
+  width: 36px;
+  height: 34px;
   border-radius: 50%;
   position: absolute;
   border: 3px solid red;
+}
+
+.cal-month-view .cal-cell-row .cal-cell:hover, .cal-month-view .cal-cell.cal-has-events.cal-open {
+
 }
 
 .cal-month-view .cal-days {
@@ -28,8 +36,8 @@
 }
 
 .cal-month-view .cal-day-cell {
-  height: 60px;
-  min-height: 60px;
+  height: 40px;
+  min-height: 40px;
   border: none;
 }
 
@@ -42,7 +50,7 @@
 }
 
 .cal-month-view .cal-cell-top {
-  min-height: 60px;
+  min-height: 40px;
 }
 
 mwl-calendar-month-view-header {
@@ -54,8 +62,8 @@ mwl-calendar-month-view-header {
 }
 
 .cal-month-view .cal-day-number {
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-top: 10px;
+  margin-right: 12px;
 }
 
 .cal-month-view .cal-day-cell.cal-today .cal-day-number {

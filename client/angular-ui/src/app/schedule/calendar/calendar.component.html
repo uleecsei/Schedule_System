@@ -30,6 +30,7 @@
         weekStartsOn="1"
         [viewDate]="viewDate"
         (beforeViewRender)="beforeMonthViewRender($event)"
+        (dayClicked)="onDayClick($event.day)"
       ></mwl-calendar-month-view>
     </div>
 
