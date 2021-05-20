@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ScheduleService.Models.CoreModels;
-using SheduleService.Core.DataAccess;
 using SheduleService.Core.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,9 +7,9 @@ using System.Text;
 
 namespace SheduleService.Core.Repository
 {
-    public class TeacherOnLessonRepository : Repository<TeacherOnLesson>, ITeacherOnLessonRepository
+    public class LessonFileRepository : Repository<LessonFile>, ILessonFileRepository
     {
-        public TeacherOnLessonRepository(ScheduleSystemContext context) : base(context)
+        public LessonFileRepository(DbContext context) : base(context)
         {
         }
     }

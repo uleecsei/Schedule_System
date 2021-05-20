@@ -10,8 +10,12 @@ namespace SheduleService.Core.UnitOfWork
     {
         ILessonRepository LessonRepository { get; }
         ITeacherRepository TeacherRepository { get; }
+        IGroupRepository GroupRepository { get; }
         ITeacherOnLessonRepository TeacherOnLessonRepository { get; }
-
+        ILessonInformationRepository LessonInformationRepository { get; }
+        ICurrentWeekNumberRepository CurrentWeekNumberRepository { get; }
+        ILessonInHistoryRepository lessonInHistoryRepository { get; }
+        ILessonFileRepository LessonFileRepository { get; }
         Task<bool> SaveChanges();
     }
 }

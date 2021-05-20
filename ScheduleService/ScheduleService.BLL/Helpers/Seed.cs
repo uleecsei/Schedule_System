@@ -53,6 +53,37 @@ namespace ScheduleService.BLL.Helpers
                     _userManager.AddToRolesAsync(admin, new[] { "Admin" }).Wait();
                 }
             }
+            if (_userManager.Users.FirstOrDefault(p => p.UserName == "Student") == null)
+            {
+                var user = new User
+                {
+                    UserName = "Student",
+                    group_id = 1893
+                };
+
+                IdentityResult result = _userManager.CreateAsync(user, "password").Result;
+
+                if (result.Succeeded)
+                {
+                    var admin = _userManager.FindByNameAsync("Student").Result;
+                    _userManager.AddToRolesAsync(admin, new[] { "Student" }).Wait();
+                }
+            }
+            if (_userManager.Users.FirstOrDefault(p => p.UserName == "Teacher") == null)
+            {
+                var user = new User
+                {
+                    UserName = "Teacher",
+                };
+
+                IdentityResult result = _userManager.CreateAsync(user, "password").Result;
+
+                if (result.Succeeded)
+                {
+                    var admin = _userManager.FindByNameAsync("Teacher").Result;
+                    _userManager.AddToRolesAsync(admin, new[] { "Teacher" }).Wait();
+                }
+            }
         }
     }
 }

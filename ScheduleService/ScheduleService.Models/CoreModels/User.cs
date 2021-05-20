@@ -7,6 +7,7 @@ namespace ScheduleService.Models.CoreModels
 {
     public class User : IdentityUser
     {
-        public string GroupName { get; set; }
+        public int? group_id { get; set; }
+        public Group Group { get; set; }
     }
 }

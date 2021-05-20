@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ScheduleService.CoreModels;
 using ScheduleService.CoreModels.ContractModels;
+using ScheduleService.Models.CoreModels;
 using SheduleService.Core.DataAccess;
 using SheduleService.Core.Repository.Interfaces;
 using System.Collections.Generic;
@@ -15,9 +15,9 @@ namespace SheduleService.Core.Repository
         {
         }
 
-        public async Task<IEnumerable<Lesson>> GetByRangeAsync(IEnumerable<int> ids)
+        public async Task<IEnumerable<Lesson>> GetLessonsBuGroupId(int group_id)
         {
-            return await _set.Include(x => x.Teachers).ThenInclude(x => x.Teacher).Where(t => ids.Contains(t.lesson_id))
+            return await _set.Include(x => x.Teachers).ThenInclude(x => x.Teacher).Where(x => x.group_id == group_id)
                 .ToListAsync();
         }
     }

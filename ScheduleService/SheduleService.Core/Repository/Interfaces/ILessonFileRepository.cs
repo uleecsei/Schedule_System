@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SheduleService.Core.Repository.Interfaces
 {
-    public interface ITeacherRepository: IRepository<Teacher>
+    public interface ILessonFileRepository: IRepository<LessonFile>
     {
     }
 }

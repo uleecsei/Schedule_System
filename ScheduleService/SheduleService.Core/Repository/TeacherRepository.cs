@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ScheduleService.CoreModels;
+using ScheduleService.Models.CoreModels;
 using SheduleService.Core.DataAccess;
 using SheduleService.Core.Repository.Interfaces;
 using System;

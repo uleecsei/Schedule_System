@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SheduleService.Core.DataAccess;
@@ -9,9 +10,10 @@ using SheduleService.Core.DataAccess;
 namespace SheduleService.Core.Migrations
 {
     [DbContext(typeof(ScheduleSystemContext))]
-    partial class ScheduleSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210517060415_update-fk")]
+    partial class updatefk
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

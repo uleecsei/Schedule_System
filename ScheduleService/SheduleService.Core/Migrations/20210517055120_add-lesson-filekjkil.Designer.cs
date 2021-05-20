@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SheduleService.Core.DataAccess;
@@ -9,9 +10,10 @@ using SheduleService.Core.DataAccess;
 namespace SheduleService.Core.Migrations
 {
     [DbContext(typeof(ScheduleSystemContext))]
-    partial class ScheduleSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210517055120_add-lesson-filekjkil")]
+    partial class addlessonfilekjkil
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -226,7 +228,8 @@ namespace SheduleService.Core.Migrations
 
                     b.HasKey("lesson_id");
 
-                    b.HasIndex("group_id");
+                    b.HasIndex("group_id")
+                        .IsUnique();
 
                     b.ToTable("Lessons");
                 });
@@ -404,7 +407,8 @@ namespace SheduleService.Core.Migrations
                         .IsUnique()
                         .HasName("UserNameIndex");
 
-                    b.HasIndex("group_id");
+                    b.HasIndex("group_id")
+                        .IsUnique();
 
                     b.ToTable("AspNetUsers");
                 });
@@ -463,8 +467,8 @@ namespace SheduleService.Core.Migrations
             modelBuilder.Entity("ScheduleService.Models.CoreModels.Lesson", b =>
                 {
                     b.HasOne("ScheduleService.Models.CoreModels.Group", "Group")
-                        .WithMany("Lesson")
-                        .HasForeignKey("group_id")
+                        .WithOne("Lesson")
+                        .HasForeignKey("ScheduleService.Models.CoreModels.Lesson", "group_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -514,8 +518,8 @@ namespace SheduleService.Core.Migrations
             modelBuilder.Entity("ScheduleService.Models.CoreModels.User", b =>
                 {
                     b.HasOne("ScheduleService.Models.CoreModels.Group", "Group")
-                        .WithMany("Users")
-                        .HasForeignKey("group_id");
+                        .WithOne("User")
+                        .HasForeignKey("ScheduleService.Models.CoreModels.User", "group_id");
                 });
 #pragma warning restore 612, 618
         }

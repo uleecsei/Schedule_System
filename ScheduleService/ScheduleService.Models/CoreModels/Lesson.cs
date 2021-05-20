@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ScheduleService.CoreModels
+namespace ScheduleService.Models.CoreModels
 {
     public class Lesson
     {
@@ -18,7 +19,13 @@ namespace ScheduleService.CoreModels
         public string lesson_week { get; set; }
         public string time_start { get; set; }
         public string time_end { get; set; }
-        public DateTime lesson_date { get; set; }
+        public bool IsCurrentSchedule { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime DateAdded { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime DateRemoved { get; set; }
         public ICollection<TeacherOnLesson> Teachers { get; set; }
+        public ICollection<LessonInHistory> LessonInHistories { get; set; }
+        public Group Group { get; set; }
     }
 }

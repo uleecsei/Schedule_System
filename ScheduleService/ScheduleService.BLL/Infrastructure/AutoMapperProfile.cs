@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using ScheduleService.CoreModels;
 using ScheduleService.CoreModels.ContractModels;
 using ScheduleService.CoreModels.KpiScheduleModels;
 using ScheduleService.Models.ContractModels;
@@ -29,6 +28,8 @@ namespace ScheduleService.BLL.Infrastructure
             CreateMap<KpiTeacher, TeacherDto>();
             CreateMap<User, DetailedUserDto>().ReverseMap();
             CreateMap<UserForRegisterDto, User>();
+            CreateMap<LessonFileDto, LessonFile>();
+            CreateMap<LessonInforamtionDto, LessonInformation>();
         }
     }
 }

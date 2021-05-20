@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ScheduleService.CoreModels
+namespace ScheduleService.Models.CoreModels
 {
     public class Teacher
     {

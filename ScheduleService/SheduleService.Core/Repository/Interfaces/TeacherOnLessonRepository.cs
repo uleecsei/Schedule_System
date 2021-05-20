@@ -1,4 +1,4 @@
-﻿using ScheduleService.CoreModels;
+﻿using ScheduleService.Models.CoreModels;
 using System;
 using System.Collections.Generic;
 using System.Text;

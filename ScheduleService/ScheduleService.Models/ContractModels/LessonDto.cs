@@ -19,7 +19,9 @@ namespace ScheduleService.CoreModels.ContractModels
         public string lesson_week { get; set; }
         public string time_start { get; set; }
         public string time_end { get; set; }
-        public DateTime lesson_date { get; set; }
+        public bool IsCurrentSchedule { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime DateRemoved { get; set; }
         public ICollection<TeacherDto> Teachers { get; set; }
     }
 }

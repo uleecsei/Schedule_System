@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SheduleService.Core.DataAccess;
@@ -9,9 +10,10 @@ using SheduleService.Core.DataAccess;
 namespace SheduleService.Core.Migrations
 {
     [DbContext(typeof(ScheduleSystemContext))]
-    partial class ScheduleSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20210516120917_not-req-group-id-2")]
+    partial class notreqgroupid2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -149,14 +151,6 @@ namespace SheduleService.Core.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("ScheduleService.Models.CoreModels.CurrentWeekNumber", b =>
-                {
-                    b.Property<int>("Number")
-                        .HasColumnType("integer");
-
-                    b.ToTable("CurrentWeekNumbers");
-                });
-
             modelBuilder.Entity("ScheduleService.Models.CoreModels.Group", b =>
                 {
                     b.Property<int>("group_id")
@@ -180,10 +174,10 @@ namespace SheduleService.Core.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<DateTime>("DateAdded")
-                        .HasColumnType("date");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime>("DateRemoved")
-                        .HasColumnType("date");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("IsCurrentSchedule")
                         .HasColumnType("boolean");
@@ -226,32 +220,10 @@ namespace SheduleService.Core.Migrations
 
                     b.HasKey("lesson_id");
 
-                    b.HasIndex("group_id");
+                    b.HasIndex("group_id")
+                        .IsUnique();
 
                     b.ToTable("Lessons");
-                });
-
-            modelBuilder.Entity("ScheduleService.Models.CoreModels.LessonFile", b =>
-                {
-                    b.Property<int>("FileId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("FileLink")
-                        .HasColumnType("text");
-
-                    b.Property<int>("LessonInHistoryId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.HasKey("FileId");
-
-                    b.HasIndex("LessonInHistoryId");
-
-                    b.ToTable("LessonFiles");
                 });
 
             modelBuilder.Entity("ScheduleService.Models.CoreModels.LessonInHistory", b =>
@@ -262,7 +234,7 @@ namespace SheduleService.Core.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<DateTime>("lesson_date")
-                        .HasColumnType("date");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("lesson_id")
                         .HasColumnType("integer");
@@ -404,7 +376,8 @@ namespace SheduleService.Core.Migrations
                         .IsUnique()
                         .HasName("UserNameIndex");
 
-                    b.HasIndex("group_id");
+                    b.HasIndex("group_id")
+                        .IsUnique();
 
                     b.ToTable("AspNetUsers");
                 });
@@ -463,17 +436,8 @@ namespace SheduleService.Core.Migrations
             modelBuilder.Entity("ScheduleService.Models.CoreModels.Lesson", b =>
                 {
                     b.HasOne("ScheduleService.Models.CoreModels.Group", "Group")
-                        .WithMany("Lesson")
-                        .HasForeignKey("group_id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ScheduleService.Models.CoreModels.LessonFile", b =>
-                {
-                    b.HasOne("ScheduleService.Models.CoreModels.LessonInHistory", "LessonInHistory")
-                        .WithMany("LessonFile")
-                        .HasForeignKey("LessonInHistoryId")
+                        .WithOne("Lesson")
+                        .HasForeignKey("ScheduleService.Models.CoreModels.Lesson", "group_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -514,8 +478,8 @@ namespace SheduleService.Core.Migrations
             modelBuilder.Entity("ScheduleService.Models.CoreModels.User", b =>
                 {
                     b.HasOne("ScheduleService.Models.CoreModels.Group", "Group")
-                        .WithMany("Users")
-                        .HasForeignKey("group_id");
+                        .WithOne("User")
+                        .HasForeignKey("ScheduleService.Models.CoreModels.User", "group_id");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,5 @@
 ﻿
-namespace ScheduleService.CoreModels
+namespace ScheduleService.Models.CoreModels
 {
     public class TeacherOnLesson
     {
